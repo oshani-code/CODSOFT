@@ -1,0 +1,88 @@
+/* Add some basic styling for the calculator */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{  
+    margin: 0px;  
+    padding: 0px;
+    overflow: hidden;
+    animation: gradientAnimation 10s linear infinite;
+
+}
+
+h1{
+    text-align: center;
+    margin: 70px 0px 0px;
+    font-family: Lobster, sans-serif;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    background: linear-gradient(70deg, #e3e6e3ef 0%, #d3d4d3 100%);
+}
+
+.calculator {
+    width: 230px;
+    height: 315px;
+    margin: 40px  auto;
+    padding: 19px 10px 10px 14px;    
+    background: linear-gradient(70deg, #5c04684d 0%, #021538 100%);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    width: 40px;
+    height: 50px;
+    font-size: 18px;
+    margin: 10px 5px 9px 7px;
+    cursor: pointer;
+    color:#fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #afbddd 0%, #584e68 100%);
+}
+
+button:hover {
+    background: linear-gradient(70deg, #c5c2c7 0%, #0c0f0d 100%);
+}
+
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(120deg,rgb(73, 233, 233) 10%,rgb(208, 122, 248) 30%,rgb(247, 125, 181) 50%,rgb(5, 78, 128) 70%,rgb(245, 127, 58)90%);
+    background-size: 500% 500%; /* Control the speed of the animation */
+    animation: gradientMove 10s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 400% 400%;
+    }
+}
+
+/* Mobile-sized screens (up to 767px) */
+@media (max-width: 767px) {
+    body {
+        background-color: #fff;
+        /* Adjust other styles for mobile devices here */
+    }
+}
+
